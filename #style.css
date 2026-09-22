@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  --sky: #8ccef2;
+  --sky-deep: #5fb2e8;
+  --pink: #ffb6d9;
+  --coral: #ff7eb6;
+  --lilac: #c9a8ff;
+  --navy: #1b2a4e;
+  --ink: #2c3550;
+  --cream: #fff9f4;
+  --card: #eef8ff;
+  --card-border: #d7ecfb;
+  --white: #ffffff;
+  --shadow: 0 8px 24px rgba(27, 42, 78, 0.12);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  color: var(--ink);
+  background: var(--cream);
+  line-height: 1.6;
+}
+
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+  color: var(--navy);
+}
+
+a {
+  color: var(--sky-deep);
+}
+
+/* ---------- NAVBAR ---------- */
+nav {
+  background: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 40px;
+  box-shadow: 0px 4px 14px rgba(27, 42, 78, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  flex-wrap: wrap;
+}
+
+.brand {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 700;
+  font-size: 1.15rem;
+  color: var(--navy);
+  letter-spacing: 0.2px;
+}
+
+.brand span {
+  color: var(--coral);
+}
+
+.link-navbar {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.link-navbar a {
+  text-decoration: none;
+  color: var(--navy);
+  margin: 0 4px;
+  padding: 8px 14px;
+  border-radius: 999px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.link-navbar a:hover,
+.link-navbar a.active {
+  background: var(--sky);
+  color: var(--navy);
+}
+
+/* ---------- PAGE HEADER / HERO ---------- */
+.page-hero {
+  background: linear-gradient(120deg, var(--pink), var(--sky));
+  padding: 64px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.page-hero .hero-text {
+  max-width: 560px;
+}
+
+.page-hero .eyebrow {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.6);
+  color: var(--navy);
+  padding: 4px 14px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 14px;
+}
+
+.page-hero h1 {
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+}
+
+.page-hero p {
+  font-size: 1.05rem;
+  color: var(--ink);
+}
+
+.page-hero img {
+  width: 190px;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 6px solid var(--white);
+  box-shadow: var(--shadow);
+}
+
+/* ---------- MAIN CONTENT ---------- */
+main {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 50px 24px 80px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--card-border);
+  border-radius: 18px;
+  padding: 32px;
+  box-shadow: var(--shadow);
+  margin-bottom: 32px;
+}
+
+.card h2 {
+  font-size: 1.4rem;
+  margin-bottom: 14px;
+  position: relative;
+  padding-left: 16px;
+}
+
+.card h2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 4px;
+  bottom: 4px;
+  width: 5px;
+  border-radius: 4px;
+  background: linear-gradient(180deg, var(--coral), var(--sky-deep));
+}
+
+.card p, .card li {
+  color: var(--ink);
+}
+
+.card img {
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+  margin: 14px 0;
+  max-width: 100%;
+}
+
+ul, ol {
+  padding-left: 22px;
+}
+
+li {
+  margin-bottom: 6px;
+}
+
+/* ---------- TABLE ---------- */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+thead th {
+  background: var(--sky-deep);
+  color: var(--white);
+  text-align: left;
+  padding: 12px 16px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+}
+
+tbody td {
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--card-border);
+  background: var(--white);
+}
+
+tbody tr:nth-child(even) td {
+  background: #f7fbff;
+}
+
+/* ---------- PROJECT CARDS ---------- */
+.project-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.project-item {
+  background: var(--white);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 22px 26px;
+  box-shadow: var(--shadow);
+}
+
+.project-item h3 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+  color: var(--sky-deep);
+}
+
+.badge {
+  display: inline-block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 999px;
+  margin-top: 10px;
+}
+
+.badge.done {
+  background: #dcf7e3;
+  color: #1e8f4e;
+}
+
+.badge.progress {
+  background: #fff1cf;
+  color: #b8860b;
+}
+
+/* ---------- FORM ---------- */
+form {
+  display: grid;
+  gap: 16px;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-row label {
+  font-weight: 600;
+  color: var(--navy);
+  font-size: 0.92rem;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="number"],
+select,
+textarea {
+  border: 1.5px solid var(--card-border);
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  background: var(--white);
+  color: var(--ink);
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: 2px solid var(--sky-deep);
+  outline-offset: 1px;
+}
+
+.radio-group, .checkbox-group {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.btn-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+input[type="submit"],
+input[type="reset"] {
+  border: none;
+  border-radius: 999px;
+  padding: 11px 26px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+input[type="submit"] {
+  background: linear-gradient(120deg, var(--coral), var(--lilac));
+  color: var(--white);
+  box-shadow: var(--shadow);
+}
+
+input[type="reset"] {
+  background: var(--white);
+  color: var(--navy);
+  border: 1.5px solid var(--card-border);
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  transform: translateY(-2px);
+}
+
+.contact-note {
+  font-size: 0.85rem;
+  color: #6b7593;
+  font-style: italic;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  background: var(--navy);
+  color: #dce6f7;
+  text-align: center;
+  padding: 26px;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+footer img {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 640px) {
+  nav {
+    padding: 14px 20px;
+    justify-content: center;
+    text-align: center;
+  }
+  .page-hero {
+    padding: 44px 24px;
+    justify-content: center;
+    text-align: center;
+  }
+  main {
+    padding: 36px 16px 60px;
+  }
+  .card {
+    padding: 22px;
+  }
+}
